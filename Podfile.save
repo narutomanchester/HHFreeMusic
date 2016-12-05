@@ -1,0 +1,16 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'Free Music’ do
+    pod 'Alamofire', '~> 4.0'
+    pod 'AlamofireImage', '~> 3.1'
+    pod 'SwiftyJSON'
+    pod 'RealmSwift'
+    pod 'SlideMenuControllerSwift'
+    pod 'RxSwift',    '~> 3.0'
+    pod 'RxCocoa',    '~> 3.0'
+    pod 'ReachabilitySwift', '~> 3'
+end
+
+pod install
+

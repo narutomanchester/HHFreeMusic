@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="Free_Music" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FAz-Vn-8xd">
+                        <rect key="frame" x="0.0" y="19" width="6" height="6"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="6" id="ehS-bA-e3n"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozR-Bv-1SV">
+                        <rect key="frame" x="43.5" y="0.0" width="226.5" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="kwF-me-HAg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t46-uM-ofF">
+                        <rect key="frame" x="43.5" y="21" width="226.5" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="Gdf-um-A0R"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvb-tn-S4J">
+                        <rect key="frame" x="267" y="0.0" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="Tqj-O2-hbs"/>
+                            <constraint firstAttribute="width" constant="45" id="pLh-0R-mNv"/>
+                        </constraints>
+                        <state key="normal" image="img-playlist-add"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="leZ-T9-kB3">
+                        <rect key="frame" x="8" y="8" width="27.5" height="27.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="leZ-T9-kB3" secondAttribute="height" multiplier="1:1" id="BnD-5I-KG3"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="mvb-tn-S4J" firstAttribute="leading" secondItem="ozR-Bv-1SV" secondAttribute="trailing" constant="5" id="0BO-WJ-qBF"/>
+                    <constraint firstItem="mvb-tn-S4J" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5ig-Ft-IfI"/>
+                    <constraint firstItem="mvb-tn-S4J" firstAttribute="leading" secondItem="t46-uM-ofF" secondAttribute="trailing" constant="5" id="7V1-zH-WeV"/>
+                    <constraint firstItem="t46-uM-ofF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="13" id="Dfs-Hc-0Du"/>
+                    <constraint firstItem="t46-uM-ofF" firstAttribute="leading" secondItem="leZ-T9-kB3" secondAttribute="trailing" constant="8" id="IVC-EU-yRZ"/>
+                    <constraint firstAttribute="trailing" secondItem="mvb-tn-S4J" secondAttribute="trailing" id="T5d-aE-FNc"/>
+                    <constraint firstAttribute="bottom" secondItem="leZ-T9-kB3" secondAttribute="bottom" constant="8" id="T80-g3-gHi"/>
+                    <constraint firstItem="leZ-T9-kB3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Toc-78-GEu"/>
+                    <constraint firstItem="FAz-Vn-8xd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zry-bz-UnF"/>
+                    <constraint firstAttribute="bottom" secondItem="t46-uM-ofF" secondAttribute="bottom" id="bjL-UD-zZQ"/>
+                    <constraint firstItem="ozR-Bv-1SV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cTb-sC-aHW"/>
+                    <constraint firstItem="FAz-Vn-8xd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nba-bD-ckW"/>
+                    <constraint firstItem="leZ-T9-kB3" firstAttribute="leading" secondItem="FAz-Vn-8xd" secondAttribute="trailing" constant="2" id="uHe-QE-Pp6"/>
+                    <constraint firstItem="ozR-Bv-1SV" firstAttribute="leading" secondItem="leZ-T9-kB3" secondAttribute="trailing" constant="8" id="x4h-wX-XIJ"/>
+                    <constraint firstItem="leZ-T9-kB3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="zKD-E8-uZQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="CircleWhite" destination="FAz-Vn-8xd" id="N6d-CC-d83"/>
+                <outlet property="imgSong" destination="leZ-T9-kB3" id="P4g-dd-9QT"/>
+                <outlet property="lblSongArtist" destination="t46-uM-ofF" id="RkD-Df-RLF"/>
+                <outlet property="lblSongName" destination="ozR-Bv-1SV" id="lkX-5O-FsS"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="img-playlist-add" width="45" height="45"/>
+    </resources>
+</document>

@@ -12,7 +12,24 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var havingPlayBar : Bool = false
+    
+    func addPlayerViewBar() {
+        let playerViewbar = Bundle.main.loadNibNamed("PlayerViewBar", owner: nil, options: nil)?.first as! CustomPlayerViewBar
+        
+        let rootview = self.window?.rootViewController?.view
+        
+        playerViewbar.frame = CGRect(x: 0, y: 0, width: (rootview?.frame.width)!, height: 50)
+        playerViewbar.translatesAutoresizingMaskIntoConstraints = false
+        rootview?.addSubview(playerViewbar)
+        
+        let horizontalConstraint = NSLayoutConstraint(item: playerViewbar, attribute: .centerX, relatedBy: .equal, toItem: rootview, attribute: .centerX, multiplier: 1.0, constant: 0)
+        let bottomConstraint = NSLayoutConstraint(item: playerViewbar, attribute: .bottom, relatedBy: .equal, toItem: rootview, attribute: .bottom, multiplier: 1.0, constant: 0)
+        let heightConstraint =  playerViewbar.heightAnchor.constraint(equalToConstant: 50)
+        let widthConstraint = playerViewbar.widthAnchor.constraint(equalToConstant: (rootview?.frame.width)!)
+        
+        rootview?.addConstraints([horizontalConstraint, bottomConstraint, heightConstraint, widthConstraint])
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
